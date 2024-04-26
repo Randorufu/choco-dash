@@ -508,6 +508,7 @@
             this.tRex.playingIntro = false;
             this.containerEl.style.webkitAnimation = '';
             this.playCount++;
+            setTimeout(fadeBlock, 200);
 
             // Handle tabbing off the page. Pause the current game.
             document.addEventListener(Runner.events.VISIBILITY,
@@ -2744,6 +2745,19 @@
     };
 })();
 
+function fadeBlock() {
+
+    var op = 1;  // initial opacity
+    var timer = setInterval(function () {
+        if (op <= 0.1){
+            clearInterval(timer);
+            document.querySelector(".blockcontainer").style.display = 'none';
+        }
+        document.querySelector(".blockcontainer").style.opacity = op;
+        document.querySelector(".blockcontainer").style.filter = 'alpha(opacity=' + op * 200 + ")";
+        op -= op * 0.1;
+    }, 50);
+}
 
 function onDocumentLoad() {
     new Runner('.interstitial-wrapper');
