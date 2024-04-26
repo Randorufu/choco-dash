@@ -11,6 +11,12 @@
      * @constructor
      * @export
      */
+    var BGMusic = new Audio("./assets/Chocobos.mp3", 100, true);
+    var cry = new Audio("./assets/BirdCry.mp3", 100, false);
+    var wark = new Audio("./assets/wark.mp3", 100, false);
+    BGMusic.loop = true;
+    BGMusic.muted = false;
+    
     function Runner(outerContainerId, opt_config) {
         // Singleton
         if (Runner.instance_) {
@@ -502,6 +508,8 @@
          * Update the game status to started.
          */
         startGame: function () {
+            wark.play();
+            BGMusic.play();
             this.setArcadeMode();
             this.runningTime = 0;
             this.playingIntro = false;
@@ -571,6 +579,7 @@
                         this.currentSpeed += this.config.ACCELERATION;
                     }
                 } else {
+                    cry.play();
                     this.gameOver();
                 }
 
