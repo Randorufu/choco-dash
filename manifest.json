@@ -1,0 +1,41 @@
+{
+  "background_color": "#000000",
+  "description": "Choco Dash Game",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "Choco Dash",
+  "orientation": "any",
+  "scope": "/choco-dash/",
+  "short_name": "Choco Dash",
+  "start_url": "/choco-dash/",
+  "prefer_related_applications": false,
+  "theme_color": "black",
+  "description": "Choco Dash Game",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    },
+    {
+      "src": "/choco-dash/icon-192x192.png",
+      "sizes": "192x192",
+            "type": "image/png"
+    },
+    {
+            "src": "/choco-dash/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+    },
+    {
+            "src": "/choco-dash/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+    },
+    {
+            "src": "/choco-dash/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+    }
+  ]
+}
